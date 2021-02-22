@@ -19,7 +19,7 @@ class AssignOrderRequestTest {
 		assignOrderRequest.setUserAvailability("D");
 
 		assertEquals(assignOrderRequest.getDeliveryDate(), "D");
-		assertEquals(assignOrderRequest.getOrderId(), "D");
+		assertEquals(assignOrderRequest.getOrderId(), "DE");
 		assertEquals(assignOrderRequest.getTrackingId(), "D");
 		assertEquals(assignOrderRequest.getTrackingStatus(), "D");
 		assertEquals(assignOrderRequest.getUserAvailability(), "D");
