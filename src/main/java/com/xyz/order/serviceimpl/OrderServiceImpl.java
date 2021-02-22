@@ -41,7 +41,6 @@ public class OrderServiceImpl implements OrderService {
 
 	@Override
 	public CreateOrderResponse createParcelRequest(CreateOrderRequest createOrderRequest) {
-		// TODO Auto-generated method stub
 
 		CreateOrderResponse createOrderResponse = new CreateOrderResponse();
 		if (null != createOrderRequest) {
@@ -109,7 +108,6 @@ public class OrderServiceImpl implements OrderService {
 // Code refactoring has to be done. The code contains multiple if conditions
 	@Override
 	public CreateOrderResponse assignOrder(AssignOrderRequest assignOrderRequest) {
-		// TODO Auto-generated method stub
 
 		CreateOrderResponse createOrderResponse = null;
 		String message = "";
@@ -190,7 +188,6 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	private UserResponse callingUserMicroservice(String username, String userAvailability) {
-		// TODO Auto-generated method stub
 
 		String url = statusupdateURL + username + "/" + userAvailability;
 		return restTemplate.getForObject(url, UserResponse.class);
@@ -199,7 +196,6 @@ public class OrderServiceImpl implements OrderService {
 
 	@Override
 	public List<Orders> fetchOrders(String status) {
-		// TODO Auto-generated method stub
 
 		List<Orders> orders = new ArrayList<>();
 		if (!status.isEmpty()) {
@@ -216,7 +212,6 @@ public class OrderServiceImpl implements OrderService {
 
 	@Override
 	public Orders getOrderDetails(String orderId) throws OrderServiceException {
-		// TODO Auto-generated method stub
 		Orders orders = null;
 		if (!orderId.isEmpty()) {
 			// Map the entity object has to be converted into a response object
@@ -236,7 +231,6 @@ public class OrderServiceImpl implements OrderService {
 
 	@Override
 	public List<Orders> getAssignedOrderDetails(String userId, String trackingStatus) throws OrderServiceException {
-		// TODO Auto-generated method stub
 		List<Orders> orders = null;
 		if (!userId.isEmpty() && !trackingStatus.isEmpty()) {
 			// Map the entity object has to be converted into a response object
