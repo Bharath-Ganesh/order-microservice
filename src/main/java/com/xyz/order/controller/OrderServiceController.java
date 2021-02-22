@@ -37,7 +37,7 @@ public class OrderServiceController {
 	private static final Logger logger = LoggerFactory.getLogger(OrderServiceController.class);
 
 	@Autowired
-	OrderService orderService;
+	private OrderService orderService;
 
 	@ApiOperation(value = "To create a delivery entity", response = CreateOrderResponse.class)
 	@PostMapping("/create")
