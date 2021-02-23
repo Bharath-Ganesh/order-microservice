@@ -38,7 +38,7 @@ public class OrderApplication {
 		return new ApiInfo("Order Microservice",
 				"Order Microservice allows the manager or admin to manage orders created by them."
 						+ "Each orders holds the information relevant to the order such as product details, status of the order, parcel details."
-						+ "However once an order is created, the status of the order or order item can be update by providing relevent information to the api."
+						+ "However once an order is created, the status of the order or order item can be updated by providing relevent information to the api."
 						+ " Following are the api's which are part of the Order microservice\r\n",
 
 				"1.0.0", null, null, null, null, Collections.emptyList());

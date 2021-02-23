@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 
 import com.xyz.order.model.request.AssignOrderRequest;
 
-
 class AssignOrderRequestTest {
 
 	@Test
