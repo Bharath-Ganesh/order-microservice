@@ -34,6 +34,7 @@ import com.xyz.order.exception.OrderServiceException;
 @RequestMapping("/order")
 public class OrderServiceController {
 
+	//We are going to test with sonar gating conditions
 	private static final Logger logger = LoggerFactory.getLogger(OrderServiceController.class);
 
 	@Autowired
