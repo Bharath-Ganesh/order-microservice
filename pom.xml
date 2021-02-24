@@ -10,18 +10,13 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.xyz</groupId>
-	<artifactId>order</artifactId>
+	<artifactId>order-oracle</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>XYZ Parcel service</name>
 	<description>This microservice is responsible for assigning the parcel to the delivery agent</description>
-	<packaging>war</packaging>
 
 	<properties>
 		<java.version>11</java.version>
-		<sonar.language>java</sonar.language>
-		<sonar.host.url>http://localhost:9000</sonar.host.url>
-		<sonar.projectKey>ordermicroservice</sonar.projectKey>
-		<sonar.projectName>ordermicroservice_local</sonar.projectName>
 	</properties>
 
 	<dependencies>
@@ -84,14 +79,6 @@
 		<plugins>
 
 
-			<!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
-			<plugin>
-				<groupId>org.sonarsource.scanner.maven</groupId>
-				<artifactId>sonar-maven-plugin</artifactId>
-				<version>3.6.0.1398</version>
-			</plugin>
-
-
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
@@ -115,35 +102,9 @@
 
 
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifestEntries>
-							<version>${project.version}</version>
-						</manifestEntries>
-					</archive>
-				</configuration>
-			</plugin>
-
-			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
-
-	<profiles>
-		<profile>
-			<id>sonarqube-dev</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<properties>
-				<sonar.host.url>http://localhost:9000</sonar.host.url>
-			</properties>
-		</profile>
-
-	</profiles>
-
 </project>
