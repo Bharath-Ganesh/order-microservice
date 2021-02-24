@@ -17,6 +17,11 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<sonar.language>java</sonar.language>
+		<!-- <sonar.host.url>http://localhost:9000</sonar.host.url> -->
+		<sonar.projectKey>ordermicroservice</sonar.projectKey>
+		<sonar.projectName>ordermicroservice_local</sonar.projectName>
 	</properties>
 
 	<dependencies>
@@ -80,6 +85,11 @@
 
 
 			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<!-- <configuration> <append>true</append> <excludes></excludes> </configuration> -->
@@ -99,11 +109,18 @@
 					</execution>
 				</executions>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.sonarsource.scanner.maven</groupId>
 				<artifactId>sonar-maven-plugin</artifactId>
 				<version>3.7.0.1746</version>
+			</plugin>
+
+			<!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
 			</plugin>
 
 
