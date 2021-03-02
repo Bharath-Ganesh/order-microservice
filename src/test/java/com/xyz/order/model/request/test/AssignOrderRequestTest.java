@@ -2,13 +2,12 @@ package com.xyz.order.model.request.test;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-
 import com.xyz.order.model.request.AssignOrderRequest;
 
-class AssignOrderRequestTest {
+public class AssignOrderRequestTest {
 
 	@Test
-	void testAssignOrder() {
+	public void testAssignOrder() {
 		AssignOrderRequest assignOrderRequest = new AssignOrderRequest();
 		assignOrderRequest.setDeliveryDate("D");
 		assignOrderRequest.setOrderId("D");

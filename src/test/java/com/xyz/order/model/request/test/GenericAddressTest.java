@@ -5,10 +5,10 @@ import org.junit.Test;
 
 import com.xyz.order.model.request.GenericAddress;
 
-class GenericAddressTest {
+public class GenericAddressTest {
 
 	@Test
-	void testAssignOrder() {
+	public void testAssignOrder() {
 		GenericAddress genericAddress = new GenericAddress();
 		genericAddress.setCity("state");
 		genericAddress.setContactName("state");
@@ -17,7 +17,7 @@ class GenericAddressTest {
 		genericAddress.setPincode("state");
 		genericAddress.setPlace("state");
 		genericAddress.setState("state");
-		
+
 		assertEquals(genericAddress.getCity(), "state");
 		assertEquals(genericAddress.getContactName(), "state");
 		assertEquals(genericAddress.getCountry(), "state");
